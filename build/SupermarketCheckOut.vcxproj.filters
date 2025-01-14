@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Person.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\CheckOutPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Till.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8D4C3E6E-4EAA-3290-BC4A-F0E43641D8C5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

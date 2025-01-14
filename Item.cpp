@@ -11,10 +11,10 @@ Item::Item(int D, string n, string nA, float p, string t, int d, int o)
     scan_order = o;
     
     //setting the default values
-    // pay_val = 0.0;
-    // found = false;
-    // quatity = 0;
-    // deleted = false;
+    pay_val = 0.0;
+    found = true;
+    quatity = 0;
+    deleted = false;
 
 
 };

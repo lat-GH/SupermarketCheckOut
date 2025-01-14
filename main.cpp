@@ -4,6 +4,7 @@ using namespace std;
 
 
 #include "Person.h"
+#include "Item.h"
 
 int main() {
     cout<<"Hello Main";
@@ -14,6 +15,9 @@ int main() {
     // Print details
     std::cout << "Name: " << p.getName() << std::endl;
     std::cout << "Age: " << p.getAge() << std::endl;
+
+    Item x(1234, "apple", "AP",1.3f,"fruit",1,1);
+    cout<<x.found<<endl;
 
     return 0;
 }

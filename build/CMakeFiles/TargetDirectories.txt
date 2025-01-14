@@ -1,0 +1,3 @@
+C:/Users/latma/OneDrive/Documents/SupermarketCheckOut/build/CMakeFiles/SupermarketCheckOut.dir
+C:/Users/latma/OneDrive/Documents/SupermarketCheckOut/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/latma/OneDrive/Documents/SupermarketCheckOut/build/CMakeFiles/ZERO_CHECK.dir

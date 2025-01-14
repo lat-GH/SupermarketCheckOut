@@ -16,10 +16,10 @@ class Item{
         
     
     public:
-        // float pay_val;
-        // bool found;
-        // int quatity;
-        // bool deleted;
+        float pay_val;
+        bool found;
+        int quatity;
+        bool deleted;
 
         //constructor
         Item(int id, string name,string nameABRV,float price,string item_type,int deal_id,int scan_order);

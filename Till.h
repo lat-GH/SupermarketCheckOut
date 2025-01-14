@@ -5,10 +5,10 @@
 using namespace std;
 
 class Till{
-    private:
-        Bill bill;
+    // private:
+    //     Bill bill;
 
-    public:
+    // public:
 
 
 

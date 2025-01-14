@@ -3,17 +3,17 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "C/C++: cl.exe build active file",
+      "label": "build",
       "command": "cl.exe",
       "args": [
         "/Zi",
         "/EHsc",
         "/nologo",
-        "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
-        "${file}"
+        "/Fe${workspaceFolder}\\build\\Debug\\SupermarketCheckOut.exe",
+        "${workspaceFolder}\\*.cpp"
       ],
       "options": {
-        "cwd": "${fileDirname}"
+        "cwd": "${workspaceFolder}"
       },
       "problemMatcher": ["$msCompile"],
       "group": {
