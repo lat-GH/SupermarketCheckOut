@@ -29,9 +29,9 @@ class Item{
 
         //constructor
         Item();
-        Item(string name);
+        // Item(string name);
         //bool populateItem(int id, string name,string nameABRV,double price,string item_type,vector<int> d,int scan_order);
-        bool populateWithCSV(CSV_row data, int scan_order);
+        bool populateWithData(CSV_row data, int scan_order);
 
         int getId() const;
         string getName() const; 

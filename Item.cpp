@@ -7,34 +7,25 @@ Item::Item()
     pay_val = 0.0;
     quatity = 0;
     deleted = false;
-
-};
-Item::Item(string n)
-{
-    name = n;
-    //setting the default values
-    pay_val = 0.0;
-    quatity = 0;
-    deleted = false;
+    discounted_deal01 = false;
+    discounted_deal02 = false;
 
 };
 
-// bool Item::populateItem(int D, string n, string nA, double p, string t, int d1, intd2, int o)
+// Item::Item(string n)
 // {
-//     id = D;
 //     name = n;
-//     nameABRV = nA;
-//     price = p;
-//     item_type = t;
-//     deal01= d1;
-//     deal02= d2;
-//     scan_order = o;
+//     pay_val = 0.0;
+//     quatity = 0;
+//     deleted = false;
+//     discounted_deal01 = false;
+//     discounted_deal02 = false;
 
-//     return true;
-// }
+// };
+
 
 //takes a row of CSV data and inputs it into the item
-bool Item::populateWithCSV(CSV_row data, int s_o)
+bool Item::populateWithData(CSV_row data, int s_o)
 {        
     if(data.size() == 0){
         return false;

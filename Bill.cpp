@@ -22,7 +22,7 @@ Item* Bill::findItem(string item_name) {
 // Method to build an item from CSV data
 void Bill::addItem(CSV_row data) {
     Item item;
-    item.populateWithCSV(data,count);
+    item.populateWithData(data,count);
     items_list.push_back(item);
     count ++;
 }
@@ -44,6 +44,7 @@ bool Bill::removeItem(string item_name) {
 }
 
 double Bill::calcTotalShop(){
+    //calculates based on the pay_val not the price
     double sum = 0;
     for(int i=0; i<items_list.size(); i++){
         sum += items_list[i].pay_val;
@@ -57,7 +58,7 @@ double Bill::calcTotalShop(){
 
 void Bill::displayBill(){
     for(int i=0; i<items_list.size(); i++){
-        cout << items_list[i].getName() << " = $"<< items_list[i].getPrice()<<endl;
+        cout <<items_list[i].getScanOrder() <<".) "<<items_list[i].getName() << " = $"<< items_list[i].pay_val<<endl;
     }
 }
 

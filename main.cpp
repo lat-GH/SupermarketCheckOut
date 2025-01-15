@@ -48,6 +48,10 @@ int main() {
     for(int i=0; i<bill.items_list.size(); i++){
         r.addItem(bill.items_list[i]);
     }
+    cout<<"-----------BEFORE DISCOUNT"<<endl;
+    r.displayBill();
+    r.checkForDeal01();
+    cout<<"-----------AFTER DICSOUNT"<<endl;
     r.displayBill();
     cout<< "Your total is = "<<r.calcTotalShop();
     

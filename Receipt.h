@@ -16,7 +16,9 @@ public:
     void sortByDeal();
     void sortByScanOrder();
     void sortByName();
-    void discountItemBy(Item item, double value);
+    void discountItemBy(Item& item, double value);
+    void checkForDeal01();
+    void prettyPrintReceipt();
 };
 
 #endif // RECEIPT_H
