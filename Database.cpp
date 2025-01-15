@@ -45,6 +45,7 @@ vector<string> Database::getRecordByName(string name){
         }
 
     }
+    cout <<"ERROR! " << name << " was NOT FOUND in csv"<<endl;
     vector<string> not_found = {};
     return not_found;
 

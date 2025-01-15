@@ -2,6 +2,7 @@
 #define ITEM_H
 
 #include <string>
+#include <vector>
 using namespace std;
 
 class Item{
@@ -11,7 +12,7 @@ class Item{
         string nameABRV;
         double price;       
         string item_type;
-        int deal_id;
+        vector<int> deal_id;
         int scan_order;
         
     
@@ -22,7 +23,19 @@ class Item{
         bool deleted;
 
         //constructor
-        Item(int id, string name,string nameABRV,double price,string item_type,int deal_id,int scan_order);
+        Item();
+        bool populateItem(int id, string name,string nameABRV,double price,string item_type,vector<int> d,int scan_order);
+        bool populateWithCSV(vector<string> data, int scan_order);
+
+        int getId() const;
+        string getName() const; 
+        string getNameABRV() const; 
+        double getPrice() const; 
+        string getItemType() const; 
+        vector<int> getDealId() const; 
+        int getScanOrder() const;
+
+        
 
 
 };

@@ -12,12 +12,31 @@ int main() {
     //Item x(1234, "apple", "AP",1.3,"fruit",1,1);
 
     Database x;
-    vector<string> result = x.getRecordByName("apple");
+    Item user_item;
 
-    // Print the vector
-    for(const auto& element : result){ 
-        cout << element << ", "; 
+
+    string user_input;
+    cout << "Enter an item to buy: ";
+    cin >> user_input;
+
+    vector<string> result = x.getRecordByName(user_input);
+    
+    // tests if it found the item
+    if(result.size() == 0){
+        cout<<"name not found in database"<<endl;
+    }else{
+        user_item.populateWithCSV(result,1);
+        cout << "Items details = " <<endl;
+        // Print the vector
+        for(const auto& element : result){ 
+            cout<< element << ", "; 
+        }
+
+        cout << "Item pay_val = " << user_item.getName()<<endl;
+
     }
+
+    
 
     
 
