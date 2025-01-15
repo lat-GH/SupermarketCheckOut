@@ -5,18 +5,19 @@
 #include<vector>
 #include <string>
 #include <optional>
+#include "GloablTypes.h"
 using namespace std;
 
 class Database
 {
 private:
-    vector<vector<string>> csv_data;
+    CSV_table csv_data;
     string filename = "SuperMarketStock.csv";
     
 public:
     Database();
     void readCSV();
-    vector<string> getRecordByName(string item_name);
+    CSV_row getRecordByName(string item_name);
 
    
 };

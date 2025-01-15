@@ -36,17 +36,25 @@ void Database::readCSV(){
     
 };
 
-vector<string> Database::getRecordByName(string name){
+CSV_row Database::getRecordByName(string name){
+    
+    
+    CSV_row new_row;
+    vector<string> titles = csv_data[0];
 
     for (const auto& row : csv_data){
         //TODO: remove the hardcoded search based on the position of name in the database rows
         if(row[1] == name){
-            return row;
+            //convert a row of csv into a dictiornay
+            for(int i=0;i<titles.size();i++){
+                new_row[titles[i]] = row[i];
+            }
+            return new_row;
         }
 
     }
     cout <<"ERROR! " << name << " was NOT FOUND in csv"<<endl;
-    vector<string> not_found = {};
+    CSV_row not_found;
     return not_found;
 
 };
