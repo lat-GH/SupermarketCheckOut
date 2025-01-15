@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(SupermarketCheckOut)
 
 # Add the executable
-add_executable(SupermarketCheckOut main.cpp Person.cpp Item.cpp CheckOutPoint.cpp Till.cpp)
+add_executable(SupermarketCheckOut main.cpp Item.cpp CheckOutPoint.cpp Till.cpp)

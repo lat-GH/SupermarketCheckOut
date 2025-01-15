@@ -1,4 +1,4 @@
-#include "CheckOutPoint.h"
+//#include "Headers/CheckOutPoint.h"
 
 // //constructor
 // CheckOutPoint::CheckOutPoint(){
@@ -46,13 +46,13 @@
 // };
 
 //while scanning new items
-string getUserInput();
-bool enterItem(string user_input);
-bool removeItem(string user_input);
-bool displayBill();
+// string getUserInput();
+// bool enterItem(string user_input);
+// bool removeItem(string user_input);
+// bool displayBill();
 
-//when want to pay
-bool generateReceipt();
-bool displayReceipt();
+// //when want to pay
+// bool generateReceipt();
+// bool displayReceipt();
         
 

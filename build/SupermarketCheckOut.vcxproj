@@ -309,7 +309,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\main.cpp" />
-    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Person.cpp" />
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Item.cpp" />
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\CheckOutPoint.cpp" />
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Till.cpp" />

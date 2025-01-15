@@ -4,9 +4,6 @@
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Person.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Item.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
