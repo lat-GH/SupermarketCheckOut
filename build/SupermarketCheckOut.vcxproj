@@ -313,6 +313,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\CheckOutPoint.cpp" />
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Database.cpp" />
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Bill.cpp" />
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Receipt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\build\ZERO_CHECK.vcxproj">

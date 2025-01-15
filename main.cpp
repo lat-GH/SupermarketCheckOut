@@ -5,6 +5,7 @@ using namespace std;
 #include "Item.h"
 #include "Database.h"
 #include "Bill.h"
+#include "Receipt.h"
 
 
 int main() {
@@ -39,12 +40,16 @@ int main() {
 
         }
 
-       
-
-
-
     }
 
+    cout<< "here is you reciept:" << endl;
+    // when finished scanning checks for deals then calculates the reciept
+    Receipt r;
+    for(int i=0; i<bill.items_list.size(); i++){
+        r.addItem(bill.items_list[i]);
+    }
+    r.displayBill();
+    cout<< "Your total is = "<<r.calcTotalShop();
     
 
     return 0;

@@ -23,6 +23,9 @@ class Item{
         double pay_val;
         int quatity;
         bool deleted;
+        bool discounted_deal01;
+        bool discounted_deal02;
+
 
         //constructor
         Item();
