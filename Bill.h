@@ -21,6 +21,7 @@ public:
     void addItem(CSV_row data);
     bool removeItem(string item);
     double calcTotalShop();
+    void displayBill();
 
 };
 

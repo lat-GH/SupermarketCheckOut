@@ -10,36 +10,40 @@ using namespace std;
 int main() {
     cout<<"Hello Main"<<endl;
 
-    //int id, string name,string nameABRV,float price,string item_type,int deal_id,int scan_order
-    //Item x(1234, "apple", "AP",1.3,"fruit",1,1);
+    bool scanning = true;
 
     Database d;
     Bill bill;
 
+    while(scanning){
+        string user_input;
+        cout << "Enter an item to buy: ";
+        cin >> user_input;
 
-    string user_input;
-    cout << "Enter an item to buy: ";
-    cin >> user_input;
+        //testing if the user wants to end the scanning
+        if(user_input == "PAY" || user_input == "pay"){
+            scanning = false;
+        }else{
+             CSV_row result = d.getRecordByName(user_input);
 
-    CSV_row result = d.getRecordByName(user_input);
-    
-    // tests if it found the item
-    if(result.size() == 0){
-        cout<<"name not found in database"<<endl;
-    }else{
-        bill.addItem(result);
-        // cout << "Items details = " <<endl;
-        // // Print the vector
-        // for(const auto& element : result){ 
-        //     cout<< element.first<<"="<< element.second<< ", "; 
-        // }
+            // tests if it found the item
+            if(result.size() == 0){
+                cout<<"name not found in database"<<endl;
+            }else{
+                bill.addItem(result);
 
-        cout << "name of item 0 on list = "<<bill.items_list[0].getName()<<endl;
-        cout << "total shop = $"<<bill.calcTotalShop()<<endl;
+                bill.displayBill();
+                cout << "total shop = $"<<bill.calcTotalShop()<<endl;
+
+            }
+
+        }
+
+       
+
+
 
     }
-
-    
 
     
 
