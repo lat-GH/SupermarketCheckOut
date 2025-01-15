@@ -13,6 +13,9 @@
     <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Till.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\latma\OneDrive\Documents\SupermarketCheckOut\CMakeLists.txt" />

@@ -9,20 +9,20 @@ class Item{
         int id;
         string name;
         string nameABRV;
-        float price;       
+        double price;       
         string item_type;
         int deal_id;
         int scan_order;
         
     
     public:
-        float pay_val;
+        double pay_val;
         bool found;
         int quatity;
         bool deleted;
 
         //constructor
-        Item(int id, string name,string nameABRV,float price,string item_type,int deal_id,int scan_order);
+        Item(int id, string name,string nameABRV,double price,string item_type,int deal_id,int scan_order);
 
 
 };

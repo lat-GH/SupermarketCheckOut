@@ -1,6 +1,6 @@
 #include "Item.h"
 
-Item::Item(int D, string n, string nA, float p, string t, int d, int o)
+Item::Item(int D, string n, string nA, double p, string t, int d, int o)
 {
     id = D;
     name = n;
