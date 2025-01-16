@@ -12,7 +12,8 @@ class Database
 {
 private:
     CSV_table csv_data;
-    string filename = "SuperMarketStock.csv";
+    //string filename = "SuperMarketStock.csv";
+    string filename = "SuperMarketStock_2.csv";
     
 public:
     Database();

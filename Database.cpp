@@ -7,7 +7,14 @@
 //using namespace std;
 
 Database::Database(){
-    readCSV();
+    try{
+        readCSV();
+    }
+    catch (const runtime_error& e) { 
+        cerr << "Error: " << e.what() << endl; 
+    } catch (const exception& e) {
+        cerr << "An unexpected error occurred: " << e.what() << endl;
+    }
     
 };
 
@@ -36,8 +43,7 @@ void Database::readCSV(){
     
 };
 
-CSV_row Database::getRecordByName(string name){
-    
+CSV_row Database::getRecordByName(string name){    
     
     CSV_row new_row;
     vector<string> titles = csv_data[0];

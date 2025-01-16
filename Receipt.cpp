@@ -88,6 +88,8 @@ void Receipt::checkForDeal01() {
             }
             else{
                 cache.clear();
+                cache.push_back(currentItem);
+
             }
             
 
@@ -133,7 +135,7 @@ void Receipt::checkForDeal02(){
 
                 //calculate how many to discount 
                 // divide into groups of 3 and take the 3 cheapest items
-                int num_of_discounts = cache.size() / 3;
+                int num_of_discounts = static_cast<int>(cache.size()) / 3;
                 //and discount them from the receipt
                 for(int j=0; j<num_of_discounts; j++){
                     discountItemBy(*cache[j], cache[j]->getPrice());
@@ -154,7 +156,7 @@ void Receipt::checkForDeal02(){
      //checks if the cache isw worth sorting out
      if(cache.size()>2){
         sortByPrice(cache);
-        int num_of_discounts = cache.size() / 3;
+        int num_of_discounts = static_cast<int>(cache.size()) / 3;
         //and discount them from the receipt
         for(int j=0; j<num_of_discounts; j++){
             discountItemBy(*cache[j], cache[j]->getPrice());

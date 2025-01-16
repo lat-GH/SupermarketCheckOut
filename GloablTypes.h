@@ -8,7 +8,6 @@
 using namespace std;
 
 using CSV_table = vector<vector<string>>;
-//using CSV_row = std::vector<std::string>;
 using CSV_row = unordered_map<string, string>;
 
 #endif

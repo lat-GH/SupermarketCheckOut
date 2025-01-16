@@ -32,7 +32,7 @@ void CheckOutPoint::runCheckOut(){
         
     }
 
-    cout<<"Thank you for shopping at BurySain's\n Live well for more\n"<<endl;
+    cout<<"\n\nThank you for shopping at BurySain's\n Live well for more\n"<<endl;
 
 
 }
@@ -47,7 +47,7 @@ void CheckOutPoint::runSingleBill(){
 
     while(scanning){
         string user_input;
-        cout <<"\nEnter an item to buy: ";
+        cout <<"\nEnter an item to buy (or pay): ";
         cin >> user_input;
 
         //testing if the user wants to end the scanning

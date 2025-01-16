@@ -6,9 +6,7 @@ using namespace std;
 
 
 int main() {
-    cout<<"Hello Main"<<endl;
     CheckOutPoint c;
     c.runCheckOut();
-    return 0;
-    
+    return 0;    
 }
