@@ -1,6 +1,7 @@
 #include "Receipt.h"
 #include <algorithm>
 #include <iostream>
+#include <iomanip>
 
 // Constructor
 Receipt::Receipt() {
@@ -81,6 +82,7 @@ void Receipt::checkForDeal01() {
                 if(cache.size() == 3) {
                     //want the new value to be 0 so discount by its price
                     discountItemBy(currentItem, currentItem.getPrice());
+                    currentItem.discounted_deal01 = true;
                     cache.clear();
                 }
             }
@@ -135,6 +137,7 @@ void Receipt::checkForDeal02(){
                 //and discount them from the receipt
                 for(int j=0; j<num_of_discounts; j++){
                     discountItemBy(*cache[j], cache[j]->getPrice());
+                    cache[j]->discounted_deal02 = true;
                 }
 
                 cache.clear();
@@ -155,6 +158,7 @@ void Receipt::checkForDeal02(){
         //and discount them from the receipt
         for(int j=0; j<num_of_discounts; j++){
             discountItemBy(*cache[j], cache[j]->getPrice());
+            cache[j]->discounted_deal02 = true;
         }
 
      }
@@ -167,8 +171,39 @@ void Receipt::checkForDeal02(){
 }
 
 void Receipt::prettyPrintReceipt() {
-    // Empty implementation
-}
+    cout <<"\n****************************\n BurySain's\n Live well for more\n"<<endl;
+    double before_discount = 0;
+    double total_discount = 0;
+
+    int left_stew = 20;
+    int right_stew = 12;
+
+    for(int i=0; i<items_list.size(); i++){
+       cout<< left << setw(left_stew) <<items_list[i].getName()<< right << setw(right_stew) <<"$"<< fixed<<setprecision(2)<<items_list[i].getPrice()<<endl;
+       before_discount += items_list[i].getPrice();
+       
+       if(items_list[i].discounted_deal01 ){
+            double discount_val = items_list[i].pay_val - items_list[i].getPrice();
+            total_discount += discount_val;
+            cout<< left << setw(left_stew) <<"DISCOUNT deal01"<< right << setw(right_stew) <<"-$"<< fixed<<setprecision(2)<<discount_val*-1<<endl;
+       }
+       else if (items_list[i].discounted_deal02)
+       {
+            double discount_val = items_list[i].pay_val - items_list[i].getPrice();
+            total_discount += discount_val;
+            cout<< left << setw(left_stew) <<"DISCOUNT deal02"<< right << setw(right_stew) <<"-$"<< fixed<<setprecision(2)<<discount_val*-1<<endl;
+       }
+       
+    }
+    cout<<endl;
+    cout<< left << setw(left_stew) <<"Before discounts"<< right << setw(right_stew) <<"$"<< fixed<<setprecision(2)<<before_discount<<endl;
+    cout<< left << setw(left_stew) <<"Amount saved"<< right << setw(right_stew) <<"-$"<< fixed<<setprecision(2)<<total_discount*-1<<endl;
+    cout<<"\nNumber of items bought: "<< count<<endl;
+    cout << left << setw(left_stew) <<"BALANCE DUE "<< right << setw(right_stew) <<"$"<< fixed<<setprecision(2)<<calcTotalShop()<<endl;
+
+    cout <<"\n****************************\n";
+    
+} 
 
 
 
