@@ -50,7 +50,7 @@ int main() {
     }
     cout<<"-----------BEFORE DISCOUNT"<<endl;
     r.displayBill();
-    r.checkForDeal01();
+    r.checkForDeal02();
     cout<<"-----------AFTER DICSOUNT"<<endl;
     r.displayBill();
     cout<< "Your total is = "<<r.calcTotalShop();

@@ -13,11 +13,13 @@ public:
 
     void addItem(Item item);
     void sortByPrice();
+    void sortByPrice(vector<Item*>& items);
     void sortByDeal();
     void sortByScanOrder();
     void sortByName();
     void discountItemBy(Item& item, double value);
     void checkForDeal01();
+    void checkForDeal02();
     void prettyPrintReceipt();
 };
 
