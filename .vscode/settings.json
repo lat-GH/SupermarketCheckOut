@@ -41,6 +41,13 @@
     "vector": "cpp",
     "fstream": "cpp",
     "optional": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "ctime": "cpp",
+    "list": "cpp",
+    "unordered_map": "cpp",
+    "sstream": "cpp",
+    "xhash": "cpp",
+    "xlocmon": "cpp",
+    "xloctime": "cpp"
   }
 }

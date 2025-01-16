@@ -171,7 +171,7 @@ void Receipt::checkForDeal02(){
 }
 
 void Receipt::prettyPrintReceipt() {
-    cout <<"\n****************************\n BurySain's\n Live well for more\n"<<endl;
+    cout <<"\n***********Your Receipt*****************\n BurySain's\n Live well for more\n"<<endl;
     double before_discount = 0;
     double total_discount = 0;
 
@@ -196,12 +196,16 @@ void Receipt::prettyPrintReceipt() {
        
     }
     cout<<endl;
-    cout<< left << setw(left_stew) <<"Before discounts"<< right << setw(right_stew) <<"$"<< fixed<<setprecision(2)<<before_discount<<endl;
-    cout<< left << setw(left_stew) <<"Amount saved"<< right << setw(right_stew) <<"-$"<< fixed<<setprecision(2)<<total_discount*-1<<endl;
+    
+    //if dont save any money then this isn't displayed in the reciept
+    if(total_discount < 0){
+        cout<< left << setw(left_stew) <<"Before discounts"<< right << setw(right_stew) <<"$"<< fixed<<setprecision(2)<<before_discount<<endl;
+        cout<< left << setw(left_stew) <<"Amount saved"<< right << setw(right_stew) <<"-$"<< fixed<<setprecision(2)<<total_discount*-1<<endl;
+    }
     cout<<"\nNumber of items bought: "<< count<<endl;
     cout << left << setw(left_stew) <<"BALANCE DUE "<< right << setw(right_stew) <<"$"<< fixed<<setprecision(2)<<calcTotalShop()<<endl;
 
-    cout <<"\n****************************\n";
+    cout <<"\n****************************\n"<<endl;
     
 } 
 

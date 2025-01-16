@@ -53,7 +53,7 @@ CSV_row Database::getRecordByName(string name){
         }
 
     }
-    cout <<"ERROR! " << name << " was NOT FOUND in csv"<<endl;
+    //cout <<"ERROR! " << name << " was NOT FOUND in csv"<<endl;
     CSV_row not_found;
     return not_found;
 

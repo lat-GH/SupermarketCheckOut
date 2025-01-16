@@ -1,5 +1,6 @@
 #include "Bill.h"
 #include <iostream>
+#include <iomanip>
 
 // Constructor definition
 Bill::Bill() : count(0) {
@@ -58,7 +59,7 @@ double Bill::calcTotalShop(){
 
 void Bill::displayBill(){
     for(int i=0; i<items_list.size(); i++){
-        cout <<items_list[i].getScanOrder() <<".) "<<items_list[i].getName() << " = $"<< items_list[i].pay_val<<endl;
+        cout <<items_list[i].getScanOrder() <<".) "<<items_list[i].getName() << " = $"<< fixed<<setprecision(2)<<items_list[i].pay_val<<endl;
     }
 }
 
