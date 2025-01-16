@@ -4,9 +4,9 @@
 #include <fstream> 
 #include <sstream>
 
-//using namespace std;
 
 Database::Database(){
+    //tries to read from csv file or throws an error
     try{
         readCSV();
     }
@@ -36,13 +36,13 @@ void Database::readCSV(){
             row.push_back(value);
         }
         csv_data.push_back(row);
-
     }
 
     file.close();
     
 };
 
+//reads the cache of the database to find the record by name
 CSV_row Database::getRecordByName(string name){    
     
     CSV_row new_row;
@@ -59,7 +59,6 @@ CSV_row Database::getRecordByName(string name){
         }
 
     }
-    //cout <<"ERROR! " << name << " was NOT FOUND in csv"<<endl;
     CSV_row not_found;
     return not_found;
 

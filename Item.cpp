@@ -12,18 +12,6 @@ Item::Item()
 
 };
 
-// Item::Item(string n)
-// {
-//     name = n;
-//     pay_val = 0.0;
-//     quatity = 0;
-//     deleted = false;
-//     discounted_deal01 = false;
-//     discounted_deal02 = false;
-
-// };
-
-
 //takes a row of CSV data and inputs it into the item
 bool Item::populateWithData(CSV_row data, int s_o)
 {        

@@ -8,13 +8,12 @@
 class Receipt : public Bill{
 
 public:
-    // Constructor
     Receipt();
 
     void addItem(Item item);
     void sortByPrice();
     void sortByPrice(vector<Item*>& items);
-    void sortByDeal();
+    void sortByDeal02();
     void sortByScanOrder();
     void sortByName();
     void discountItemBy(Item& item, double value);
@@ -23,4 +22,4 @@ public:
     void prettyPrintReceipt();
 };
 
-#endif // RECEIPT_H
+#endif 

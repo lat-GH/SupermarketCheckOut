@@ -8,5 +8,6 @@ using namespace std;
 int main() {
     CheckOutPoint c;
     c.runCheckOut();
-    return 0;    
+    return 0;
+    
 }

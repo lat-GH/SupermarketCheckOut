@@ -12,14 +12,11 @@ class Bill {
 
 public:
     vector<Item> items_list;
-    //double total_price;
     int count;
     
-    Bill(); // Constructor
+    Bill(); 
     
-    Item* findItem(string item_name);
     void addItem(CSV_row data);
-    bool removeItem(string item);
     double calcTotalShop();
     void displayBill();
 

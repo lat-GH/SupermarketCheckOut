@@ -3,9 +3,7 @@
 #include <iostream>
 #include <iomanip>
 
-// Constructor
 Receipt::Receipt() {
-    // Empty constructor
 }
 
 void Receipt::addItem(Item item) {
@@ -13,6 +11,7 @@ void Receipt::addItem(Item item) {
     count ++;
 }
 
+//sorts the items in the Recipet by Price
 void Receipt::sortByPrice() {
     auto compareByPrice = [](const Item& a, const Item& b) {
     return a.getPrice() < b.getPrice();};
@@ -21,6 +20,7 @@ void Receipt::sortByPrice() {
     
 }
 
+//sorts the items in a given vector of items by Price
 void Receipt::sortByPrice(vector<Item*>& list) {
     auto compareByPrice = [](const Item* a, const Item* b) {
     return a->getPrice() < b->getPrice();};
@@ -29,7 +29,8 @@ void Receipt::sortByPrice(vector<Item*>& list) {
     
 }
 
-void Receipt::sortByDeal() {
+//sorts the items in the Reciept by Deal02 group
+void Receipt::sortByDeal02() {
     auto compareByDeal = [](const Item& a, const Item& b) {
     return a.getDeal02() < b.getDeal02();};
 
@@ -65,7 +66,7 @@ void Receipt::checkForDeal01() {
 
     //loop through all the items in receipt
     for(int i=0; i<items_list.size(); i++){
-        //passing the refrence --> so it will alter the objects items_list
+        //passing the refrence --> so it will alter the objects in Receipt's items_list
         Item& currentItem = items_list[i];
         //check if even in the deal
         if(currentItem.getDeal01() == 1){
@@ -75,12 +76,11 @@ void Receipt::checkForDeal01() {
             }
 
             else if (currentItem.getName() == cache.back().getName()){
-                //cout<< "currentItem.getName() = "<< currentItem.getName() << " cache.back().getName() = "<<cache.back().getName()<<endl;
                 cache.push_back(currentItem);
                 
                 //when have 3 of the same then discount the final item
                 if(cache.size() == 3) {
-                    //want the new value to be 0 so discount by its price
+                    //want the new pay value to be 0 so discount by its price
                     discountItemBy(currentItem, currentItem.getPrice());
                     currentItem.discounted_deal01 = true;
                     cache.clear();
@@ -88,11 +88,10 @@ void Receipt::checkForDeal01() {
             }
             else{
                 cache.clear();
+                //make sure the current item is added into a fresh cache
                 cache.push_back(currentItem);
 
-            }
-            
-
+            }          
 
         }
     }
@@ -102,10 +101,9 @@ void Receipt::checkForDeal01() {
 }
 
 void Receipt::checkForDeal02(){
-    //KEY TO REMEMBER --> must be the cheapest item from the triple that is discounted!
-
-    //sort by deal2 group
-    sortByDeal();
+    
+    //sort by deal02 group
+    sortByDeal02();
 
     //cache all the items of a deal
     vector<Item*> cache;
@@ -124,18 +122,17 @@ void Receipt::checkForDeal02(){
                 cache.push_back(&currentItem);
 
             }
-            //reach end of list or no more of the same
-            // dont want to lose currentItem when put in next cache
+            //CASE: no more of the same
+            
             else{
                 //sort the cahce by price (so can discount the cheapest values)
                 sortByPrice(cache);
-                // for(int j=0; j<cache.size(); j++){
-                //     cout<<cache[j].getName()<<", "<<cache[j].getDeal02()<<endl;
-                // }
 
                 //calculate how many to discount 
                 // divide into groups of 3 and take the 3 cheapest items
+                //avoids the need of deciding which triples to group the item
                 int num_of_discounts = static_cast<int>(cache.size()) / 3;
+
                 //and discount them from the receipt
                 for(int j=0; j<num_of_discounts; j++){
                     discountItemBy(*cache[j], cache[j]->getPrice());
@@ -143,17 +140,14 @@ void Receipt::checkForDeal02(){
                 }
 
                 cache.clear();
+                // dont want to lose currentItem when put in next cache
                 cache.push_back(&currentItem);
             }
 
-        }
-
-        
-
-        
-        
+        }      
      }
-     //checks if the cache isw worth sorting out
+     //CASE: reached end of list 
+     //checks if the cache is worth sorting out
      if(cache.size()>2){
         sortByPrice(cache);
         int num_of_discounts = static_cast<int>(cache.size()) / 3;
@@ -168,8 +162,6 @@ void Receipt::checkForDeal02(){
 
     //sort back into the scan order
     sortByScanOrder();
-
-
 }
 
 void Receipt::prettyPrintReceipt() {

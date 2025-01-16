@@ -19,7 +19,6 @@ public:
     Database();
     void readCSV();
     CSV_row getRecordByName(string item_name);
-
    
 };
 
